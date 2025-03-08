@@ -9,6 +9,7 @@ nav{
     align-items: center;
     text-align: center;
     height: 8vh;
+    background-color: white;
 }
 
 #empresa{
@@ -31,7 +32,7 @@ h2{
     display: flex;
     justify-content: space-around;
     list-style: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Calibri;
     font-weight: 600;
     font-size: 15px;
     margin-left: -100px;
@@ -41,7 +42,7 @@ h2{
     display: flex;
     align-items: center;
     position: relative;
-    padding: 10px;
+    padding: 14px;
     color: #379f90;
     cursor: pointer;
     height: 10vh;
@@ -55,7 +56,8 @@ h2{
     width: max-content;
     background-color: white;
     text-align: left;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #categorias li:hover .opciones{
@@ -69,7 +71,11 @@ h2{
 
 .opciones li:hover{
     background-color: mintcream;
-    border-radius: 20px;
+}
+
+.opciones li:last-child:hover{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .flechaAbajo{
@@ -79,19 +85,41 @@ h2{
 
 }
 
+.languajeContainer{
+    width: 120px;
+}
+
 #languaje{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    top: 15px;
     background-color: lightcoral;
-    width: 100px;
+    width: 120px;
     height: 30px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
+}
+
+#flag{
+    width: 40px;
+    height: 17px;
+}
+
+select{
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 80px;
 }
 
 /*MAIN*/
 main{
     width: 100%;
-    height: 92vh;
+    height: 82.5vh;
     background-image: url("img/sk_fondo.jpg");
     background-size: contain;
+    filter: brightness(80%);
 }
