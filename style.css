@@ -9,7 +9,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    height: 8vh;
+    height: 65px;
     background-color: white;
 }
 
@@ -33,7 +33,7 @@ h2{
     justify-content: space-around;
     list-style: none;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 85%;
     margin-left: -100px;
     width: 60%;
 }
@@ -125,7 +125,6 @@ main{
 }
 
 #imagenFondo{
-    filter: brightness(80%);
     position: fixed;
     width: 100%;
 }
@@ -133,8 +132,11 @@ main{
 section{
     position: absolute;
     display: flex;
+    flex-direction: column;
     width: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.6));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .6));
+    overflow: hidden;
+    height: 82.6vh;
 }
 
 .pink{
@@ -142,8 +144,8 @@ section{
     color: white;
 }
 
-#izquierda{
-    width: 50%;
+#informacion{
+    width: 100%;
     padding-top: 60vh;
     padding-left: 50px;
     color: white;
@@ -152,7 +154,7 @@ section{
 .disponible{
     font-size: small;
     letter-spacing: 1px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .skin{
@@ -172,14 +174,39 @@ section{
     letter-spacing: 2px;
 }
 
+.carrusel{
+    display: flex;
+    color: white;
+    list-style: circle;
+    font-size: large;
+    margin-top: 10px;
+    position: absolute;
+    right: 20px;
+}
+
+.carrusel li{
+    width: 20px;
+}
+
+.carrusel li:last-child{
+    list-style: disc;
+}
+
+#botones{
+    display: flex;
+    height: 25px;
+}
+
 .club{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 150px;
     height: 45px;
     border-radius: 25px;
-    align-items: center;
-    margin-left: -25px;
-    display: flex;
-    justify-content: space-around;
+    position: absolute;
+    left: 21px;
+    bottom: 10px;
 }
 
 #gift{
@@ -192,40 +219,16 @@ section{
     margin-left: -15px;
 }
 
-#derecha{
-    display: flex;
-    align-items: end;
-    width: 50%;
-    height: 82.5vh;
-}
-
-.carrusel{
-    display: flex;
-    color: white;
-    list-style: circle;
-    margin-left: 87%;
-    margin-bottom: 20px;
-    font-size: large;
-}
-
-.carrusel li{
-    width: 15px;
-}
-
-.carrusel li:last-child{
-    list-style: disc;
-}
-
 .mensaje{
+    display: flex;
+    align-content: center;
+    justify-content: center;
     position: absolute;
-    right: 20px;
+    right: 15px;
     bottom: 10px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
 }
 
 .mensaje img{
@@ -235,10 +238,10 @@ section{
 }
 
 /*MOBILE*/
-@media /*(min-width: 480px) and */(max-width: 768px){
+@media (min-width: 480px) and (max-width: 768px){
     #empresa{
         position: absolute;
-        
+        left: 10px;
     }
     #categorias{
         flex-direction: column;
@@ -247,34 +250,44 @@ section{
         left: 100px;
         top: 50px;
         width: 200px;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255);
+        height: 400px;
     }
     .categoria{
-        padding: 10px;
-        height: 30px;
+        padding-left: 10px;
     }
     .flechaAbajo{
         transform: rotate(0deg) scaleX(.8);
     }
     .opciones{
         border-radius: 0;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255);
         text-align: center;
     }
     #categorias li:hover .opciones{
         top: 10px;
         left: 190px;
     }
-    .opciones li:last-child:hover{border-radius: 0px;
+    .opciones li:last-child:hover{
+        border-radius: 0px;
     }
     section{
-        background-image: linear-gradient(rgb(255, 255, 255, .3), #2f2516ff);
+        background-image: linear-gradient(rgb(0, 0, 0, .3), rgba(54, 42, 25, 1));
+        height: 60%;
     }
-    #izquierda{
-        padding-top: 40vh;
-        padding-left: 30%;
+    #informacion{
+        padding-top: 24vh;
+        padding-left: 210px;
     }
-    #derecha{
-        
+    .skin{
+        width: 70%;
     }
+
+    .club{
+        left: 205px;
+    }
+}
+
+@media (max-width: 480px){
+    
 }
