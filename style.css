@@ -289,6 +289,10 @@ section{
 
     .club{
         left: 205px;
+        bottom: 20vh;
+    }
+    .mensaje{
+        bottom: 20vh;
     }
 }
 
@@ -340,9 +344,5 @@ section{
     }
     .club{
         left: 15px;
-        bottom: 20vh;
-    }
-    .mensaje{
-        bottom: 20vh;
     }
 }
