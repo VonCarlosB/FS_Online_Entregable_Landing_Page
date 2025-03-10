@@ -28,6 +28,10 @@ h2{
     color: #379f90;
 }
 
+#menuIcon{
+    display: none;
+}
+
 #categorias{
     display: flex;
     justify-content: space-around;
@@ -238,7 +242,7 @@ section{
 }
 
 /*MOBILE*/
-@media (min-width: 480px) and (max-width: 768px){
+@media (max-width: 768px){
     #empresa{
         position: absolute;
         left: 10px;
@@ -289,5 +293,56 @@ section{
 }
 
 @media (max-width: 480px){
-    
+    #categorias{
+        left: -900px;
+    }
+    #menuIcon{
+        display: block;
+        position: absolute;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border: none;
+        cursor: pointer;
+    }
+    .menuLine{
+        width: 90%;
+        height: 3px;
+        background-color: #379f90;
+        margin: auto;
+        border-radius: 2px;
+    }
+    #menuIcon:focus + #categorias{
+        left: 100px;
+    }
+    #empresa{
+        width: 100%;
+        justify-content: center;
+    }
+    .languajeContainer{
+        position: absolute;
+        z-index: 99;
+        right: 0px;
+    }
+    #informacion{
+        padding-left: 15px;
+    }
+    .carrusel{
+        position: static;
+        padding-left: 20px;
+    }
+    #botones{
+        z-index: 99;
+    }
+    .club{
+        left: 15px;
+        bottom: 20vh;
+    }
+    .mensaje{
+        bottom: 20vh;
+    }
 }
